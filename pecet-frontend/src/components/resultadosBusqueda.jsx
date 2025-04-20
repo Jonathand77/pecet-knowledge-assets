@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import styles from './ResultadosBusqueda.module.css'
 
 export default function ResultadosBusqueda({ resultados }) {
   if (resultados.length === 0) {
@@ -6,17 +7,18 @@ export default function ResultadosBusqueda({ resultados }) {
   }
 
   return (
-    <div className="grid md:grid-cols-2 gap-6 mt-6">
+    <div className={styles.resultsContainer}>
       {resultados.map(activo => (
-        <div key={activo.id} className="border rounded-lg p-4 shadow hover:shadow-md bg-white transition duration-300">
-          <h3 className="text-xl font-semibold text-green-700">{activo.titulo}</h3>
-          <p className="text-sm text-gray-500 mb-1">Autor: {activo.autor}</p>
-          <p className="text-sm text-gray-500 mb-2">Tipo: {activo.tipo} | Fecha: {activo.fecha}</p>
-          <p className="text-gray-700 line-clamp-2">{activo.descripcion}</p>
+        <div key={activo.id} className={styles.resultCard}>
+          <h3 className={styles.resultTitle}>{activo.titulo}</h3>
+          <p className={styles.resultMeta}>
+            Autor: {activo.autor} | Tipo: {activo.tipo} | Fecha: {activo.fecha}
+          </p>
+          <p className={styles.resultDescription}>{activo.descripcion}</p>
 
           <Link
             to={`/detalle/${activo.id}`}
-            className="inline-block mt-3 text-blue-600 hover:underline font-medium"
+            className={styles.viewMoreLink}
           >
             Ver más detalles →
           </Link>

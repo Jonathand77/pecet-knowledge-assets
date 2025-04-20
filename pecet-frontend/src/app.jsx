@@ -1,29 +1,41 @@
+import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Navbar from './components/navbar'
-import Footer from './components/footer'
 import Home from './pages/Home'
 import Buscar from './pages/Buscar'
 import SubirActivo from './pages/SubirActivo'
-import DetalleActivo from './pages/ActivoDetail'
 import Dashboard from './pages/Dashboard'
+import ActivoDetail from './pages/ActivoDetail'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import { RutaProtegida } from './components/RutaProtegida'
+import { AuthProvider } from './context/AuthContext'
 
 function App() {
   return (
-    <Router>
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
-        <main className="flex-grow p-4">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/buscar" element={<Buscar />} />
-            <Route path="/subir" element={<SubirActivo />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/detalle/:id" element={<DetalleActivo />} />
-          </Routes>
-        </main>
-        <Footer />
+    <AuthProvider>
+      <div className="min-h-screen flex flex-col bg-gray-100 text-gray-800 font-sans">
+        <Router>
+          <Navbar />
+          <main className="flex-grow container mx-auto p-4">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/buscar" element={<Buscar />} />
+              <Route path="/activo/:id" element={<ActivoDetail />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route
+                path="/subir"
+                element={
+                  <RutaProtegida permitido={['admin', 'investigador']}>
+                    <SubirActivo />
+                  </RutaProtegida>
+                }
+              />
+            </Routes>
+          </main>
+          <Footer />
+        </Router>
       </div>
-    </Router>
+    </AuthProvider>
   )
 }
 

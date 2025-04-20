@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import styles from './Comentarios.module.css'
 
 export default function Comentarios({ activoId }) {
   const [comentarios, setComentarios] = useState([
@@ -15,20 +16,20 @@ export default function Comentarios({ activoId }) {
   }
 
   return (
-    <div className="mt-8">
-      <h2 className="text-xl font-semibold mb-3">Comentarios</h2>
-      <div className="space-y-2">
+    <div className={styles.commentsContainer}>
+      <h2 className={styles.commentsTitle}>Comentarios</h2>
+      <div className={styles.commentList}>
         {comentarios.map((c, idx) => (
-          <div key={idx} className="bg-gray-100 p-3 rounded shadow-sm">
-            <p className="font-medium text-gray-800">{c.autor}</p>
-            <p className="text-gray-700">{c.texto}</p>
+          <div key={idx} className={styles.commentCard}>
+            <p className={styles.commentAuthor}>{c.autor}</p>
+            <p className={styles.commentText}>{c.texto}</p>
           </div>
         ))}
       </div>
 
-      <div className="mt-4">
+      <div className={styles.newCommentContainer}>
         <textarea
-          className="w-full border p-2 rounded resize-none"
+          className={styles.textareaInput}
           rows={3}
           placeholder="Escribe tu comentario..."
           value={nuevo}
@@ -36,7 +37,7 @@ export default function Comentarios({ activoId }) {
         />
         <button
           onClick={agregarComentario}
-          className="mt-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+          className={styles.commentButton}
         >
           Comentar
         </button>

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import SearchBar from '../components/searchBar'
 import ActivoCard from '../components/activoCard'
+import styles from './Buscar.module.css'
 
 // Simulación de activos existentes
 const activosMock = [
@@ -41,16 +42,16 @@ export default function Buscar() {
   }
 
   return (
-    <div>
-      <h2 className="text-2xl font-bold mb-4">Buscar Activos</h2>
+    <div className={styles.container}>
+      <h2 className={styles.titulo}>Buscar Activos</h2>
       <SearchBar onSearch={handleSearch} />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className={styles.gridResultados}>
         {resultados.length > 0 ? (
           resultados.map((activo) => (
             <ActivoCard key={activo.id} activo={activo} />
           ))
         ) : (
-          <p>No se encontraron resultados.</p>
+          <p className={styles.mensaje}>No se encontraron resultados.</p>
         )}
       </div>
     </div>

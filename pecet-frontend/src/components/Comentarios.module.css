@@ -1,0 +1,58 @@
+.commentsContainer {
+    margin-top: 2rem;
+  }
+  
+  .commentsTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .commentList {
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+  
+  .commentCard {
+    background-color: #f3f4f6;
+    padding: 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .commentAuthor {
+    font-weight: 600;
+    color: #1f2937;
+  }
+  
+  .commentText {
+    color: #4b5563;
+    margin-top: 0.5rem;
+  }
+  
+  .newCommentContainer {
+    margin-top: 2rem;
+  }
+  
+  .textareaInput {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    resize: none;
+    margin-bottom: 1rem;
+  }
+  
+  .commentButton {
+    padding: 0.75rem 1.25rem;
+    background-color: #16a34a;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+  }
+  
+  .commentButton:hover {
+    background-color: #15803d;
+  }
+  

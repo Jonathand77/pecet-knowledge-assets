@@ -1,0 +1,31 @@
+.footer {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .textMain {
+    font-size: 0.95rem;
+    font-weight: 400;
+  }
+  
+  .textMain span {
+    font-weight: 600;
+    color: #ffffff;
+  }
+  
+  .textSecondary {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: #a3c2f2;
+  }
+  

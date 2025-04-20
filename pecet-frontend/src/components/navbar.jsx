@@ -1,14 +1,23 @@
 import { Link } from 'react-router-dom'
+import SelectorRol from './SelectorRol'
+import styles from './Navbar.module.css'
 
 export default function Navbar() {
   return (
-    <nav className="bg-blue-900 text-white p-4 flex justify-between items-center">
-      <h1 className="text-xl font-bold">PECET</h1>
-      <div className="space-x-4">
-        <Link to="/">Inicio</Link>
-        <Link to="/buscar">Buscar</Link>
-        <Link to="/subir">Subir Activo</Link>
-        <Link to="/dashboard">Dashboard</Link>
+    <nav className={styles.navbar}>
+      <h1 className={styles.logo}>PECET</h1>
+      
+      <div className={styles.navContent}>
+        <div className={styles.navLinks}>
+          <Link to="/" className={styles.link}>Home</Link>
+          <Link to="/buscar" className={styles.link}>Buscar</Link>
+          <Link to="/subir" className={styles.link}>Subir Activo</Link>
+          <Link to="/dashboard" className={styles.link}>Dashboard</Link>
+        </div>
+
+        <div className={styles.rolSelector}>
+          <SelectorRol />
+        </div>
       </div>
     </nav>
   )

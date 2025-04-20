@@ -1,0 +1,35 @@
+.container {
+    padding: 1.5rem;
+  }
+  
+  .titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #1e293b;
+  }
+  
+  .gridResultados {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  
+  @media (min-width: 640px) {
+    .gridResultados {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .gridResultados {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .mensaje {
+    font-size: 1rem;
+    color: #6b7280;
+    margin-top: 1rem;
+  }
+  

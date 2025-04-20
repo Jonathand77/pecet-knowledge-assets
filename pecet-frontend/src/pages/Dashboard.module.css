@@ -1,0 +1,95 @@
+.dashboardContainer {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboardTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2d3748;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .summaryCard {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .summaryCard h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 10px;
+  }
+  
+  .summaryCard p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #38a169;
+  }
+  
+  .recentAssetsCard {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .recentAssetsCard h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 10px;
+  }
+  
+  .recentAssetsList {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+  }
+  
+  .recentAssetsList li {
+    margin-bottom: 8px;
+  }
+  
+  .recentAssetsListLink {
+    text-decoration: none;
+    color: #3182ce;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .recentAssetsListLink:hover {
+    color: #2b6cb0;
+  }
+  
+  .registerButton {
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #38a169;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+  }
+  
+  .registerButton:hover {
+    background-color: #2f855a;
+  }
+  

@@ -1,8 +1,22 @@
-export default function Home() {
-    return (
-      <section>
-        <h2 className="text-2xl font-bold mb-4">Bienvenido al Sistema de Activos del Conocimiento del PECET</h2>
-        <p>Aquí podrás buscar, visualizar y gestionar los activos generados por nuestros investigadores.</p>
-      </section>
-    )
-  }
+import { useAuth } from '../context/AuthContext'
+import styles from './Home.module.css'
+
+function Home() {
+  const { usuario } = useAuth()
+
+  return (
+    <div className={styles.container}>
+      <h1 className={styles.titulo}>Bienvenido al sistema PECET</h1>
+
+      {(usuario.rol === 'admin' || usuario.rol === 'investigador') && (
+        <button className={styles.botonNuevo}>
+          + Nuevo Activo
+        </button>
+      )}
+
+      <p className={styles.texto}>Aquí se mostrarán los activos del conocimiento...</p>
+    </div>
+  )
+}
+
+export default Home

@@ -1,0 +1,70 @@
+.container {
+    max-width: 64rem;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.375rem;
+  }
+  
+  .titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #047857;
+    margin-bottom: 1rem;
+  }
+  
+  .subtitulo {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+  }
+  
+  .descripcion {
+    margin-top: 1rem;
+  }
+  
+  .palabrasClave,
+  .tipo,
+  .estado {
+    margin-top: 1rem;
+  }
+  
+  .estado {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    color: white;
+  }
+  
+  .estadoPublico {
+    background-color: #10b981;
+  }
+  
+  .estadoPrivado {
+    background-color: #6b7280;
+  }
+  
+  .enlace {
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .enlace:hover {
+    background-color: #2563eb;
+  }
+  
+  .informacion {
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .comentarios {
+    margin-top: 1.5rem;
+  }
+  
