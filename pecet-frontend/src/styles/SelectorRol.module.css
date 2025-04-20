@@ -1,0 +1,39 @@
+.selectorContainer {
+  background-color: #f1f5f9;
+  padding: 0.4rem 0.8rem;
+  border-radius: 2rem;
+  box-shadow: inset 0 0 0 1px #cbd5e1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.label {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.9rem;
+}
+
+.select {
+  padding: 0.35rem 0.6rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  color: #1e293b;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #60a5fa;
+}
+
+.usuarioInfo {
+  font-size: 0.85rem;
+  color: #475569;
+  font-weight: 500;
+}

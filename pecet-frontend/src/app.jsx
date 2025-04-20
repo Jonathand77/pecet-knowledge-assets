@@ -5,8 +5,8 @@ import Buscar from './pages/Buscar'
 import SubirActivo from './pages/SubirActivo'
 import Dashboard from './pages/Dashboard'
 import ActivoDetail from './pages/ActivoDetail'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+import Navbar from './components/navbar'
+import Footer from './components/footer'
 import { RutaProtegida } from './components/RutaProtegida'
 import { AuthProvider } from './context/AuthContext'
 
@@ -19,6 +19,7 @@ function App() {
           <main className="flex-grow container mx-auto p-4">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/subirActivo" element={<SubirActivo />} />
               <Route path="/buscar" element={<Buscar />} />
               <Route path="/activo/:id" element={<ActivoDetail />} />
               <Route path="/dashboard" element={<Dashboard />} />

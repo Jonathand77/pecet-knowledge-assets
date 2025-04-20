@@ -1,4 +1,4 @@
-import styles from './ActivoCard.module.css'
+import styles from '../styles/ActivoCard.module.css'
 
 export default function ActivoCard({ activo }) {
   return (

@@ -1,30 +1,51 @@
-import { useState } from 'react'
-import styles from './SubirActivo.module.css'
+import { useState } from "react";
+import styles from "../styles/SubirActivo.module.css";
+import CustomSelect from "../components/CustomSelect.jsx";
 
 export default function NuevoActivo() {
   const [activo, setActivo] = useState({
-    titulo: '',
-    descripcion: '',
-    autor: '',
-    grupo: '',
-    fecha: '',
-    palabrasClave: '',
-    tipo: '',
-    estado: 'Público',
-    enlace: '',
-    idioma: 'Español',
-  })
+    titulo: "",
+    descripcion: "",
+    autor: "",
+    grupo: "",
+    fecha: "",
+    palabrasClave: "",
+    tipo: "",
+    estado: "Público",
+    enlace: "",
+    idioma: "Español",
+  });
 
   const handleChange = (e) => {
-    const { name, value } = e.target
-    setActivo({ ...activo, [name]: value })
-  }
+    const { name, value } = e.target;
+    setActivo({ ...activo, [name]: value });
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log('Activo creado:', activo)
-    alert('Activo registrado (simulado en consola).')
-  }
+    e.preventDefault();
+    console.log("Activo creado:", activo);
+    alert("Activo registrado (simulado en consola).");
+  };
+
+  const opcionesTipo = [
+    { value: "Documento", label: "📄 Documento" },
+    { value: "Video", label: "🎥 Video" },
+    { value: "Audio", label: "🎧 Audio" },
+    { value: "Imagen", label: "🖼️ Imagen" },
+    { value: "Dataset", label: "📊 Dataset" },
+    { value: "Software", label: "💻 Software" },
+  ];
+
+  const opcionesEstado = [
+    { value: "Público", label: "🌐 Público" },
+    { value: "Privado", label: "🔒 Privado" },
+  ];
+
+  const opcionesIdioma = [
+    { value: "Español", label: "🇪🇸 Español" },
+    { value: "Inglés", label: "🇬🇧 Inglés" },
+    { value: "Otro", label: "🌍 Otro" },
+  ];
 
   return (
     <div className={styles.container}>
@@ -75,32 +96,22 @@ export default function NuevoActivo() {
           placeholder="Palabras clave (separadas por coma)"
           className={styles.input}
         />
-        
-        <select
+
+        <CustomSelect
+          label="Tipo de activo"
           name="tipo"
           value={activo.tipo}
           onChange={handleChange}
-          required
-          className={styles.select}
-        >
-          <option value="">Selecciona el tipo de activo</option>
-          <option value="Documento">Documento</option>
-          <option value="Video">Video</option>
-          <option value="Audio">Audio</option>
-          <option value="Imagen">Imagen</option>
-          <option value="Dataset">Dataset</option>
-          <option value="Software">Software</option>
-        </select>
+          options={opcionesTipo}
+        />
 
-        <select
+        <CustomSelect
+          label="Estado de visibilidad"
           name="estado"
           value={activo.estado}
           onChange={handleChange}
-          className={styles.select}
-        >
-          <option value="Público">Público</option>
-          <option value="Privado">Privado</option>
-        </select>
+          options={opcionesEstado}
+        />
 
         <input
           name="enlace"
@@ -109,22 +120,19 @@ export default function NuevoActivo() {
           placeholder="URL o ubicación del archivo"
           className={styles.input}
         />
-        
-        <select
+
+        <CustomSelect
+          label="Idioma"
           name="idioma"
           value={activo.idioma}
           onChange={handleChange}
-          className={styles.select}
-        >
-          <option value="Español">Español</option>
-          <option value="Inglés">Inglés</option>
-          <option value="Otro">Otro</option>
-        </select>
+          options={opcionesIdioma}
+        />
 
         <button type="submit" className={styles.button}>
-          Registrar activo
+          🚀 Registrar activo
         </button>
       </form>
     </div>
-  )
+  );
 }

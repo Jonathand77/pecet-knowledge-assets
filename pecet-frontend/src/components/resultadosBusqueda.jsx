@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import styles from './ResultadosBusqueda.module.css'
+import styles from '../styles/ResultadosBusqueda.module.css'
 
 export default function ResultadosBusqueda({ resultados }) {
   if (resultados.length === 0) {

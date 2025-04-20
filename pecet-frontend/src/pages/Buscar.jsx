@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import SearchBar from '../components/searchBar'
 import ActivoCard from '../components/activoCard'
-import styles from './Buscar.module.css'
+import styles from '../styles/Buscar.module.css'
 
 // Simulación de activos existentes
 const activosMock = [

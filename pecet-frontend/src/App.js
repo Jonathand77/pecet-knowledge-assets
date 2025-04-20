@@ -19,6 +19,7 @@ function App() {
           <main className="flex-grow container mx-auto p-4">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/subirActivo" element={<SubirActivo />} />
               <Route path="/buscar" element={<Buscar />} />
               <Route path="/activo/:id" element={<ActivoDetail />} />
               <Route path="/dashboard" element={<Dashboard />} />

@@ -1,6 +1,6 @@
 import { useAuth } from '../context/AuthContext'
 import { Navigate } from 'react-router-dom'
-import styles from './RutaProtegida.module.css'
+import styles from '../styles/RutaProtegida.module.css'
 
 export function RutaProtegida({ permitido = [], children }) {
   const { usuario } = useAuth()

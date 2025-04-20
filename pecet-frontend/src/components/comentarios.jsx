@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from './Comentarios.module.css'
+import styles from '../styles/Comentarios.module.css'
 
 export default function Comentarios({ activoId }) {
   const [comentarios, setComentarios] = useState([

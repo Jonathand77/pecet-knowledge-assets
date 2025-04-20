@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Comentarios from '../components/comentarios'
-import styles from './ActivoDetail.module.css'
+import styles from '../styles/ActivoDetail.module.css'
 
 const activosMock = [
   {
